@@ -1,0 +1,286 @@
+<DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/android-chrome-512x512.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/output.css">
+    <title>Productivity Dashboard</title>
+  </head>
+
+  <body class="overflow-x-hidden relative min-h-screen bg-white">
+    <div class="relative h-full w-full p-3 md:p-5">
+
+      <!-- Navigation Bar -->
+      <nav
+        class="flex fixed items-center justify-between w-[calc(100%-1.5rem)] md:w-[calc(100%-2.5rem)] left-[10px] md:left-[20px] top-1 bg-white border-3 border-black rounded px-4 py-2 md:py-4 z-[9999]">
+        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black">Productivity Dashboard</h1>
+        <div class="active:scale-90 transition-all">
+          <i class="moon ri-moon-fill text-2xl md:text-4xl text-black cursor-pointer"></i>
+          <i class="sun ri-sun-fill text-2xl md:text-4xl text-black cursor-pointer hidden"></i>
+        </div>
+      </nav>
+
+      <!-- Home page section -->
+      <section class="mt-3 box-border pt-[60px] ">
+
+        <header
+          class="w-full mb-5 p-4 bg-white border-black border-3 rounded flex flex-col md:flex-row md:p-6 items-start justify-between gap-6">
+
+          <div class="header1 text-black">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl"></h2>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-3 md:mb-7"></h1>
+            <h4 class="text-2xl sm:text-3xl md:text-4xl font-[700]"></h4>
+          </div>
+
+          <div class="header2 flex flex-row md:flex-col justify-between items-start w-full md:w-auto gap-6 text-black">
+          </div>
+        </header>
+
+        <div class="all-features pb-4 lg:pb-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          <div
+            class="elem h-[300px] rounded bg-white border-3 border-black transition-all active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
+            id="0">
+            <i class="fa-solid fa-clipboard-list text-black text-6xl  md:text-4xl lg:text-6xl"></i>
+            <h2 class="text-black text-4xl md:text-2xl lg:text-3xl font-semibold">Todo List</h2>
+          </div>
+
+          <div
+            class="elem h-[300px] rounded bg-white border-3 border-black transition-all active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
+            id="1">
+            <i class="fa-solid fa-calendar text-black text-5xl"></i>
+            <h2 class="text-black text-4xl md:text-2xl lg:text-3xl font-semibold">Daily Planner</h2>
+          </div>
+
+          <div
+            class="elem h-[300px] rounded bg-white border-3 border-black transition-all active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
+            id="2">
+            <i class="fa-brands fa-superpowers text-black text-5xl"></i>
+            <h2 class="text-black text-4xl md:text-2xl lg:text-3xl font-semibold">Motivation</h2>
+          </div>
+
+          <div
+            class="elem h-[300px] rounded bg-white border-3 border-black transition-all active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
+            id="3">
+            <i class="fa-solid fa-clock-rotate-left text-black text-5xl"></i>
+            <h2 class="text-black text-4xl md:text-2xl lg:text-3xl font-semibold">Pomodoro Timer</h2>
+          </div>
+
+          <div
+            class="elem h-[300px] rounded bg-white border-3 border-black transition-all active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
+            id="4">
+            <i class="fa-solid fa-bullseye text-black text-5xl"></i>
+            <h2 class="text-black text-4xl md:text-2xl lg:text-3xl font-semibold">Daily Goals</h2>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- To Do List  -->
+      <section class="fullElem todo-list-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white hidden ">
+        <div class="py-4 lg:py-8 flex justify-between items-center px-4">
+          <h2 class="text-xl md:text-2xl lg:text-4xl text-black font-bold">Your Personalized To Do App</h2>
+          <button class="back bg-black rounded-[50%] w-7 h-7 font-[700] active:scale-[0.97] cursor-pointer" id="0"><i
+              class="ri-close-large-fill text-sm"></i></button>
+        </div>
+        
+        <div class="todo-container h-full w-full flex flex-col md:flex-row gap-4">
+          <div class="addTask w-full h-auto md:h-[78%] lg:h-[85%] md:w-[45%] lg:w-[35%] rounded">
+            <form action="" class="flex flex-col items-start p-4">
+              <input
+                class="border-2 border-black text-black px-2 py-1 text-base md:text-xl xl:text-2xl mb-5 w-full rounded outline-none"
+                type="text" name="" id="" placeholder="Enter Task" maxlength="14">
+              <textarea
+                class="border-2 border-black text-black px-2 py-1 text-base md:text-xl xl:text-2xl mb-5 w-full rounded outline-none resize-none h-[300px]"
+                name="" id="" placeholder="Enter Task Details"></textarea>
+              <div class="flex items-center mb-[20px] w-full gap-3">
+                <input class="w-6 h-6" type="checkbox" name="" id="checkbox">
+                <label class="text-black text-base md:text-xl xl:text-2xl font-[700]" for="checkbox">Mark as
+                  Important</label>
+              </div>
+              <button
+                class="bg-[var(--pri)] border-2 border-black text-black px-5 py-2.5 text-xl md:text-2xl font-bold mb-5 w-full rounded-sm outline-none cursor-pointer transition-all active:scale-[0.97]">Add
+                Task</button>
+            </form>
+          </div>
+          <div
+            class="allTask w-full h-auto md:h-[78%] lg:h-[85%] md:w-[55%] lg:w-[65%] rounded  flex-col gap-2 items-start p-4 overflow-auto">
+          </div>
+        </div>
+      </section>
+
+      <!-- Daily Planner -->
+      <section class="fullElem daily-planner-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-screen w-full py-3 lg:py-5 bg-white hidden">
+        <div class="py-4 lg:py-8 flex justify-between items-center px-4">
+          <h2 class="text-xl md:text-2xl lg:text-4xl text-black font-bold">
+            Plan Your Day
+          </h2>
+          <button class="back bg-black rounded-[50%] w-7 h-7 font-[700] active:scale-[0.97] cursor-pointer" id="1">
+            <i class="ri-close-large-fill text-sm"></i>
+          </button>
+        </div>
+        <div
+          class="day-planner h-[calc(100vh-160px)] md:h-[calc(100vh-180px)] lg:h-[calc(100vh-200px)] overflow-auto p-4 rounded grid grid-cols-1 sm:grid-cols-2 gap-4">
+        </div>
+      </section>
+
+      <!-- Motivational Quotes -->
+      <section class="fullElem motivation-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white hidden">
+        <div class="py-4 lg:py-8 flex justify-between items-center px-4">
+          <h2 class="text-xl md:text-2xl lg:text-4xl text-black font-bold">Quote of the Day</h2>
+          <button
+            class="back bg-black text-white rounded-full w-8 h-8 flex items-center justify-center active:scale-95 cursor-pointer"
+            id="2">
+            <i class="ri-close-large-fill text-sm"></i>
+          </button>
+        </div>
+
+        <div class="motivation-container flex flex-col items-start gap-6 py-6 px-4">
+          <div class="bg-amber-50 border-2 border-black rounded-lg p-6 w-full md:w-[70%] lg:w-[60%] relative">
+            <img src="./assets/images/icons8-reload-50.png"
+              class="reload-quote absolute right-4 top-4 h-8 cursor-pointer active:scale-95" alt="Reload Quote">
+
+            <div class="bg-black text-white px-4 py-2 rounded-lg inline-block mb-4">
+              <h3 class="text-lg md:text-xl font-semibold">Quote</h3>
+            </div>
+
+            <p class="text-black text-lg md:text-2xl font-bold mb-4 motivation-quote"></p>
+
+            <p class="text-black text-right italic motivation-author"></p>
+
+            <img src="./assets/images/icons8-quote-50.png"
+              class="absolute left-4 bottom-4 h-10 opacity-40 pointer-events-none" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!-- Pomodoro Timer -->
+      <section class="fullElem pomodoro-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white hidden">
+        <div class="py-4 lg:py-8 flex justify-between items-center px-4">
+          <h2 class="text-xl md:text-2xl lg:text-4xl text-black font-bold">Study With Me</h2>
+          <button
+            class="back bg-black text-white rounded-full w-8 h-8 flex items-center justify-center cursor-pointer active:scale-95"
+            id="3">
+            <i class="ri-close-large-fill text-sm"></i>
+          </button>
+        </div>
+
+        <div class="pomo-container flex flex-col items-center gap-6 py-6 px-4">
+          <!-- Session Type -->
+          <h4 class="session text-black text-lg md:text-2xl font-bold border-y-2 border-black px-4 py-2 rounded">
+            Work Session
+          </h4>
+
+          <!-- Timer Display -->
+          <div
+            class="flex flex-col items-center gap-4 bg-amber-50 border-2 border-black rounded-lg p-6 w-full md:w-[70%] lg:w-[50%] text-center">
+            <h1 class="text-black text-5xl md:text-7xl font-bold pomo-time">25:00</h1>
+
+            <!-- Buttons -->
+            <div class="flex flex-wrap justify-center gap-4">
+              <button
+                class="start-timer text-black curpo bg-[var(--pri)] border-2 border-black px-6 py-2 text-lg md:text-xl font-bold rounded cursor-pointer active:scale-95">
+                Start
+              </button>
+              <button
+                class="pause-timer text-black curpo bg-[var(--pri)] border-2 border-black px-6 py-2 text-lg md:text-xl font-bold rounded cursor-pointer active:scale-95">
+                Pause
+              </button>
+              <button
+                class="reset-timer text-black curpo bg-[var(--pri)] border-2 border-black px-6 py-2 text-lg md:text-xl font-bold rounded cursor-pointer active:scale-95">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Daily Goals -->
+      <section class="fullElem daily-goals-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white hidden">
+        <!-- Header -->
+        <div class="py-4 lg:py-8 flex justify-between items-center px-4">
+          <h2 class="text-xl md:text-2xl lg:text-4xl text-black font-bold">Daily Goals</h2>
+          <button class="back bg-black text-white rounded-full w-8 h-8 flex items-center justify-center cursor-pointer active:scale-95"
+            id="4">
+            <i class="ri-close-large-fill text-sm"></i>
+          </button>
+        </div>
+
+        <!-- Goals Container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4">
+          <!-- Day Card -->
+          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
+            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
+              <img src="assets/images/check-double-fill.svg" alt=""
+                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+            </div>
+            <textarea
+              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+          </div>
+          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
+            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
+              <img src="assets/images/check-double-fill.svg" alt=""
+                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+            </div>
+            <textarea
+              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+          </div>
+          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
+            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
+              <img src="assets/images/check-double-fill.svg" alt=""
+                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+            </div>
+            <textarea
+              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+          </div>
+          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
+            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
+              <img src="assets/images/check-double-fill.svg" alt=""
+                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+            </div>
+            <textarea
+              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+          </div>
+          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
+            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
+              <img src="assets/images/check-double-fill.svg" alt=""
+                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+            </div>
+            <textarea
+              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+          </div>
+          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
+            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
+              <img src="assets/images/check-double-fill.svg" alt=""
+                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+            </div>
+            <textarea
+              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+          </div>
+          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
+            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
+              <img src="assets/images/check-double-fill.svg" alt=""
+                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+            </div>
+            <textarea
+              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+
+  </html>

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --pri: #f8f4e1;
+  --sec: #381c0a;
+  --tri1: #feba17;
+  --tri2: #74512d;
+}
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 200;
+  src: url(../assets/fonts/AeonikTRIAL-Light.otf);
+}
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 500;
+  src: url(../assets/fonts/AeonikTRIAL-Regular.otf);
+}
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 700;
+  src: url(../assets/fonts/AeonikTRIAL-Bold.otf);
+}
+
+/* ✅ Base layer me custom reset and defaults */
+@layer base {
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: aeonik;
+    /* padding: 0;  */ /* Sirf tab uncomment karo jab sab elements ka padding reset karna ho */
+  }
+
+  body {
+    color: var(--pri);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
