@@ -45,7 +45,7 @@ It helps you manage daily tasks, plan your day, stay motivated, check real-time 
 3. Open `index.html` in your browser.  
 
 ## 🌍 Live Demo  
-🔗 **Netlify Link:** [https://your-netlify-link.netlify.app](https://your-netlify-link.netlify.app)  
+🔗 **Netlify Link:** [https://productivity-dashboard1.netlify.app/](https://productivity-dashboard1.netlify.app/)  
 🔗 **GitHub Repo:** [https://github.com/MrAli-a11/productivity-dashboard.git](https://github.com/MrAli-a11/productivity-dashboard.git)  
 
 ---
