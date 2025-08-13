@@ -243,7 +243,7 @@ async function getWeatherData() {
   const apiKey = '5a2de221b5b0470fae2141216250908'
   const area = 'hyderabad'
   let data
-  const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${area}`)
+  const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${area}`)
   data = await response.json()
 
   const headerH2 = document.querySelector('.header1 h2')
