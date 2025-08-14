@@ -22,6 +22,11 @@ function openFeatures() {
       fullElemPage[back.id].style.display = 'none';
     })
   })
+
+  let moon = document.querySelector('.moon')
+  moon.addEventListener('click', ()=>{
+    alert('Dark mode feature is coming soon! 🌑')
+  })
 }
 
 openFeatures()
