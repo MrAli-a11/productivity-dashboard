@@ -171,7 +171,7 @@ async function fetchQuote() {
   if (reloadQuote) reloadQuote.addEventListener('click', fetchQuote);
 
   try {
-    let fetchedData = await fetch('https://api.quotable.io/random');
+    let fetchedData = await fetch('http://api.quotable.io/random');
     const data = await fetchedData.json();
 
     quoteContent.textContent = data.content;
