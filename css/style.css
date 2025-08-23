@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 @theme {
   --pri: #f8f4e1;
   --sec: #381c0a;

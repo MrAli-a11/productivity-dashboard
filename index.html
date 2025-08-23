@@ -13,16 +13,20 @@
     <title>Productivity Dashboard</title>
   </head>
 
-  <body class="overflow-x-hidden relative min-h-screen bg-white">
+  <body class="overflow-x-hidden relative min-h-screen bg-white dark:bg-black transition-colors duration-300">
     <div class="relative h-full w-full p-3 md:p-5">
 
       <!-- Navigation Bar -->
       <nav
-        class="flex fixed items-center justify-between w-[calc(100%-1.5rem)] md:w-[calc(100%-2.5rem)] left-[10px] md:left-[20px] top-1 bg-white border-3 border-black rounded px-4 py-2 md:py-4 z-[9999]">
-        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black">Productivity Dashboard</h1>
+        class="flex fixed items-center justify-between w-[calc(100%-1.5rem)] md:w-[calc(100%-2.5rem)] left-[10px] md:left-[20px] top-1 bg-white dark:bg-black border-3 border-black dark:border-white rounded px-4 py-2 md:py-4 z-[9999]  transition-colors duration-300">
+        <h1
+          class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-white transition-colors duration-300">
+          Productivity Dashboard</h1>
         <div class="active:scale-90 transition-all">
-          <i class="moon ri-moon-fill text-2xl md:text-4xl text-black cursor-pointer"></i>
-          <i class="sun ri-sun-fill text-2xl md:text-4xl text-black cursor-pointer hidden"></i>
+          <i
+            class="moon ri-moon-fill text-2xl md:text-4xl text-black cursor-pointer transition-colors duration-300"></i>
+          <i
+            class="sun ri-sun-fill text-2xl md:text-4xl text-black dark:text-white cursor-pointer hidden transition-colors duration-300"></i>
         </div>
       </nav>
 
@@ -30,81 +34,105 @@
       <section class="mt-3 box-border pt-[60px] ">
 
         <header
-          class="w-full mb-5 p-4 bg-white border-black border-3 rounded flex flex-col md:flex-row md:p-6 items-start justify-between gap-6">
+          class="w-full mb-5 p-4 bg-white dark:bg-black border-black dark:border-white border-3 rounded flex flex-col md:flex-row md:p-6 items-start justify-between gap-6 transition-colors duration-300">
 
-          <div class="header1 text-black">
+          <div class="header1 text-black dark:text-white transition-colors duration-300">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl"></h2>
             <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-3 md:mb-7"></h1>
             <h4 class="text-2xl sm:text-3xl md:text-4xl font-[700]"></h4>
           </div>
 
-          <div class="header2 flex flex-row md:flex-col justify-between items-start w-full md:w-auto gap-6 text-black">
+          <div
+            class="header2 flex flex-row md:flex-col justify-between items-start w-full md:w-auto gap-6 text-black dark:text-white transition-colors duration-300">
           </div>
         </header>
 
-        <div class="all-features pb-4 lg:pb-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div
+          class="all-features pb-4 lg:pb-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           <div
-            class="elem h-[300px] rounded bg-white border-3 border-black transition-all active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
+            class="elem h-[300px] rounded bg-white dark:bg-black border-3 border-black dark:border-white transition-all duration-300 active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
             id="0">
-            <i class="fa-solid fa-clipboard-list text-black text-6xl  md:text-4xl lg:text-6xl"></i>
-            <h2 class="text-black text-4xl md:text-2xl lg:text-3xl font-semibold">Todo List</h2>
+            <i
+              class="fa-solid fa-clipboard-list text-black dark:text-white text-5xl  md:text-4xl lg:text-6xl transition-colors duration-300"></i>
+            <h2
+              class="text-black dark:text-white text-4xl md:text-2xl lg:text-3xl font-semibold transition-colors duration-300">
+              Todo List</h2>
           </div>
 
           <div
-            class="elem h-[300px] rounded bg-white border-3 border-black transition-all active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
+            class="elem h-[300px] rounded bg-white dark:bg-black border-3 border-black dark:border-white transition-all duration-300 active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
             id="1">
-            <i class="fa-solid fa-calendar text-black text-5xl"></i>
-            <h2 class="text-black text-4xl md:text-2xl lg:text-3xl font-semibold">Daily Planner</h2>
+            <i
+              class="fa-solid fa-calendar text-black dark:text-white text-5xl  md:text-4xl lg:text-6xl transition-colors duration-300"></i>
+            <h2
+              class="text-black dark:text-white text-4xl md:text-2xl lg:text-3xl font-semibold transition-colors duration-300">
+              Daily Planner</h2>
           </div>
 
           <div
-            class="elem h-[300px] rounded bg-white border-3 border-black transition-all active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
+            class="elem h-[300px] rounded bg-white dark:bg-black border-3 border-black dark:border-white transition-all duration-300 active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
             id="2">
-            <i class="fa-brands fa-superpowers text-black text-5xl"></i>
-            <h2 class="text-black text-4xl md:text-2xl lg:text-3xl font-semibold">Motivation</h2>
+            <i
+              class="fa-brands fa-superpowers text-black dark:text-white text-5xl  md:text-4xl lg:text-6xl transition-colors duration-300"></i>
+            <h2
+              class="text-black dark:text-white text-4xl md:text-2xl lg:text-3xl font-semibold transition-colors duration-300">
+              Motivation</h2>
           </div>
 
           <div
-            class="elem h-[300px] rounded bg-white border-3 border-black transition-all active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
+            class="elem h-[300px] rounded bg-white dark:bg-black border-3 border-black dark:border-white transition-all duration-300 active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
             id="3">
-            <i class="fa-solid fa-clock-rotate-left text-black text-5xl"></i>
-            <h2 class="text-black text-4xl md:text-2xl lg:text-3xl font-semibold">Pomodoro Timer</h2>
+            <i
+              class="fa-solid fa-clock-rotate-left text-black dark:text-white text-5xl  md:text-4xl lg:text-6xl transition-colors duration-300"></i>
+            <h2
+              class="text-black dark:text-white text-4xl md:text-2xl lg:text-3xl font-semibold transition-colors duration-300">
+              Pomodoro Timer</h2>
           </div>
 
           <div
-            class="elem h-[300px] rounded bg-white border-3 border-black transition-all active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
+            class="elem h-[300px] rounded bg-white dark:bg-black border-3 border-black dark:border-white transition-all duration-300 active:scale-[0.97] cursor-pointer flex items-center justify-center gap-4 flex-col p-4"
             id="4">
-            <i class="fa-solid fa-bullseye text-black text-5xl"></i>
-            <h2 class="text-black text-4xl md:text-2xl lg:text-3xl font-semibold">Daily Goals</h2>
+            <i
+              class="fa-solid fa-bullseye text-black dark:text-white text-5xl  md:text-4xl lg:text-6xl transition-colors duration-300"></i>
+            <h2
+              class="text-black dark:text-white text-4xl md:text-2xl lg:text-3xl font-semibold transition-colors duration-300">
+              Daily Goals</h2>
           </div>
         </div>
 
       </section>
 
       <!-- To Do List  -->
-      <section class="fullElem todo-list-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white hidden ">
+      <section
+        class="fullElem todo-list-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white dark:bg-black transition-colors duration-300 hidden ">
         <div class="py-4 lg:py-8 flex justify-between items-center px-4">
-          <h2 class="text-xl md:text-2xl lg:text-4xl text-black font-bold">Your Personalized To Do App</h2>
-          <button class="back bg-black rounded-[50%] w-7 h-7 font-[700] active:scale-[0.97] cursor-pointer" id="0"><i
-              class="ri-close-large-fill text-sm"></i></button>
+          <h2
+            class="text-xl md:text-2xl lg:text-4xl text-black dark:text-white transition-colors duration-300 font-bold">
+            Your Personalized To Do App</h2>
+          <button
+            class="back bg-black dark:bg-white dark:text-black rounded-[50%] w-7 h-7 font-[700] active:scale-[0.97] cursor-pointer transition-colors duration-300"
+            id="0">
+            <i class="ri-close-large-fill text-sm"></i></button>
         </div>
-        
+
         <div class="todo-container h-full w-full flex flex-col md:flex-row gap-4">
           <div class="addTask w-full h-auto md:h-[78%] lg:h-[85%] md:w-[45%] lg:w-[35%] rounded">
             <form action="" class="flex flex-col items-start p-4">
               <input
-                class="border-2 border-black text-black px-2 py-1 text-base md:text-xl xl:text-2xl mb-5 w-full rounded outline-none"
+                class="border-2 border-black dark:border-white text-black dark:text-white px-2 py-1 text-base md:text-xl xl:text-2xl mb-5 w-full rounded outline-none transition-colors duration-300"
                 type="text" name="" id="" placeholder="Enter Task" maxlength="14">
               <textarea
-                class="border-2 border-black text-black px-2 py-1 text-base md:text-xl xl:text-2xl mb-5 w-full rounded outline-none resize-none h-[300px]"
+                class="border-2 border-black dark:border-white text-black dark:text-white px-2 py-1 text-base md:text-xl xl:text-2xl mb-5 w-full rounded outline-none resize-none h-[300px] transition-colors duration-300 placeholder:to-white"
                 name="" id="" placeholder="Enter Task Details"></textarea>
               <div class="flex items-center mb-[20px] w-full gap-3">
                 <input class="w-6 h-6" type="checkbox" name="" id="checkbox">
-                <label class="text-black text-base md:text-xl xl:text-2xl font-[700]" for="checkbox">Mark as
+                <label
+                  class="text-black dark:text-white text-base md:text-xl xl:text-2xl font-[700] transition-colors duration-300"
+                  for="checkbox">Mark as
                   Important</label>
               </div>
               <button
-                class="bg-[var(--pri)] border-2 border-black text-black px-5 py-2.5 text-xl md:text-2xl font-bold mb-5 w-full rounded-sm outline-none cursor-pointer transition-all active:scale-[0.97]">Add
+                class="bg-[var(--pri)] dark:bg-black border-2 border-black dark:border-white text-black dark:text-white px-5 py-2.5 text-xl md:text-2xl font-bold mb-5 w-full rounded-sm outline-none cursor-pointer transition-all active:scale-[0.97] duration-300">Add
                 Task</button>
             </form>
           </div>
@@ -115,12 +143,16 @@
       </section>
 
       <!-- Daily Planner -->
-      <section class="fullElem daily-planner-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-screen w-full py-3 lg:py-5 bg-white hidden">
+      <section
+        class="fullElem daily-planner-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-screen w-full py-3 lg:py-5 bg-white dark:bg-black hidden transition-colors duration-300">
         <div class="py-4 lg:py-8 flex justify-between items-center px-4">
-          <h2 class="text-xl md:text-2xl lg:text-4xl text-black font-bold">
+          <h2
+            class="text-xl md:text-2xl lg:text-4xl text-black dark:text-white font-bold transition-colors duration-300">
             Plan Your Day
           </h2>
-          <button class="back bg-black rounded-[50%] w-7 h-7 font-[700] active:scale-[0.97] cursor-pointer" id="1">
+          <button
+            class="back bg-black dark:bg-white dark:text-black rounded-[50%] w-7 h-7 font-[700] active:scale-[0.97] cursor-pointer transition-colors duration-300"
+            id="1">
             <i class="ri-close-large-fill text-sm"></i>
           </button>
         </div>
@@ -130,28 +162,37 @@
       </section>
 
       <!-- Motivational Quotes -->
-      <section class="fullElem motivation-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white hidden">
+      <section
+        class="fullElem motivation-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white dark:bg-black hidden transition-colors duration-300">
         <div class="py-4 lg:py-8 flex justify-between items-center px-4">
-          <h2 class="text-xl md:text-2xl lg:text-4xl text-black font-bold">Quote of the Day</h2>
+          <h2
+            class="text-xl md:text-2xl lg:text-4xl text-black dark:text-white font-bold transition-colors duration-300">
+            Quote of the Day</h2>
           <button
-            class="back bg-black text-white rounded-full w-8 h-8 flex items-center justify-center active:scale-95 cursor-pointer"
+            class="back bg-black dark:bg-white dark:text-black rounded-[50%] w-7 h-7 font-[700] active:scale-[0.97] cursor-pointer transition-colors duration-300"
             id="2">
             <i class="ri-close-large-fill text-sm"></i>
           </button>
         </div>
 
         <div class="motivation-container flex flex-col items-start gap-6 py-6 px-4">
-          <div class="bg-amber-50 border-2 border-black rounded-lg p-6 w-full md:w-[70%] lg:w-[60%] relative">
-            <img src="./assets/images/icons8-reload-50.png"
-              class="reload-quote absolute right-4 top-4 h-8 cursor-pointer active:scale-95" alt="Reload Quote">
+          <div
+            class="bg-amber-50 dark:bg-black border-2 border-black dark:border-white rounded-lg p-6 w-full md:w-[70%] lg:w-[60%] relative transition-colors duration-300">
+            
+              <i class="reload-quote fa-solid fa-rotate-right absolute right-4 top-4 text-black dark:text-white  text-xl md:text-2xl cursor-pointer active:scale-95 transition-colors duration-300">
+              </i>
 
-            <div class="bg-black text-white px-4 py-2 rounded-lg inline-block mb-4">
+            <div
+              class="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-lg inline-block mb-4 transition-colors duration-300">
               <h3 class="text-lg md:text-xl font-semibold">Quote</h3>
             </div>
 
-            <p class="text-black text-lg md:text-2xl font-bold mb-4 motivation-quote"></p>
+            <p
+              class="text-black dark:text-white text-lg md:text-2xl font-bold mb-4 motivation-quote transition-colors duration-300">
+            </p>
 
-            <p class="text-black text-right italic motivation-author"></p>
+            <p class="text-black dark:text-white text-right italic motivation-author transition-colors duration-300">
+            </p>
 
             <img src="./assets/images/icons8-quote-50.png"
               class="absolute left-4 bottom-4 h-10 opacity-40 pointer-events-none" alt="">
@@ -160,11 +201,14 @@
       </section>
 
       <!-- Pomodoro Timer -->
-      <section class="fullElem pomodoro-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white hidden">
+      <section
+        class="fullElem pomodoro-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white dark:bg-black hidden transition-colors duration-300">
         <div class="py-4 lg:py-8 flex justify-between items-center px-4">
-          <h2 class="text-xl md:text-2xl lg:text-4xl text-black font-bold">Study With Me</h2>
+          <h2
+            class="text-xl md:text-2xl lg:text-4xl text-black dark:text-white font-bold transition-colors duration-300">
+            Study With Me</h2>
           <button
-            class="back bg-black text-white rounded-full w-8 h-8 flex items-center justify-center cursor-pointer active:scale-95"
+            class="back bg-black dark:bg-white dark:text-black rounded-[50%] w-7 h-7 font-[700] active:scale-[0.97] cursor-pointer transition-colors duration-300"
             id="3">
             <i class="ri-close-large-fill text-sm"></i>
           </button>
@@ -172,27 +216,30 @@
 
         <div class="pomo-container flex flex-col items-center gap-6 py-6 px-4">
           <!-- Session Type -->
-          <h4 class="session text-black text-lg md:text-2xl font-bold border-y-2 border-black px-4 py-2 rounded">
+          <h4
+            class="session text-black dark:text-white text-lg md:text-2xl font-bold border-y-2 border-black dark:border-white px-4 py-2 rounded transition-colors duration-300">
             Work Session
           </h4>
 
           <!-- Timer Display -->
           <div
-            class="flex flex-col items-center gap-4 bg-amber-50 border-2 border-black rounded-lg p-6 w-full md:w-[70%] lg:w-[50%] text-center">
-            <h1 class="text-black text-5xl md:text-7xl font-bold pomo-time">25:00</h1>
+            class="flex flex-col items-center gap-4 bg-amber-50 dark:bg-black border-2 border-black dark:border-white rounded-lg p-6 w-full md:w-[70%] lg:w-[50%] text-center transition-colors duration-300">
+            <h1
+              class="text-black dark:text-white text-5xl md:text-7xl font-bold pomo-time transition-colors duration-300">
+              25:00</h1>
 
             <!-- Buttons -->
             <div class="flex flex-wrap justify-center gap-4">
               <button
-                class="start-timer text-black curpo bg-[var(--pri)] border-2 border-black px-6 py-2 text-lg md:text-xl font-bold rounded cursor-pointer active:scale-95">
+                class="start-timer text-black dark:text-white curpo bg-[var(--pri)] dark:bg-black border-2 border-black dark:border-white px-6 py-2 text-lg md:text-xl font-bold rounded cursor-pointer active:scale-95  transition-colors duration-300">
                 Start
               </button>
               <button
-                class="pause-timer text-black curpo bg-[var(--pri)] border-2 border-black px-6 py-2 text-lg md:text-xl font-bold rounded cursor-pointer active:scale-95">
+                class="pause-timer text-black dark:text-white curpo bg-[var(--pri)] dark:bg-black border-2 border-black dark:border-white px-6 py-2 text-lg md:text-xl font-bold rounded cursor-pointer active:scale-95  transition-colors duration-300">
                 Pause
               </button>
               <button
-                class="reset-timer text-black curpo bg-[var(--pri)] border-2 border-black px-6 py-2 text-lg md:text-xl font-bold rounded cursor-pointer active:scale-95">
+                class="reset-timer text-black dark:text-white bg-[var(--pri)] dark:bg-black border-2 border-black dark:border-white px-6 py-2 text-lg md:text-xl font-bold rounded cursor-pointer active:scale-95 transition-colors duration-300">
                 Reset
               </button>
             </div>
@@ -201,11 +248,15 @@
       </section>
 
       <!-- Daily Goals -->
-      <section class="fullElem daily-goals-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white hidden">
+      <section
+        class="fullElem daily-goals-fullpage pt-[80px] md:pt-[100px] lg:pt-[100px] h-full w-full py-3 lg:py-5 bg-white dark:bg-black hidden transition-colors duration-300">
         <!-- Header -->
         <div class="py-4 lg:py-8 flex justify-between items-center px-4">
-          <h2 class="text-xl md:text-2xl lg:text-4xl text-black font-bold">Daily Goals</h2>
-          <button class="back bg-black text-white rounded-full w-8 h-8 flex items-center justify-center cursor-pointer active:scale-95"
+          <h2
+            class="text-xl md:text-2xl lg:text-4xl text-black dark:text-white font-bold transition-colors duration-300">
+            Daily Goals</h2>
+          <button
+            class="back bg-black dark:bg-white text-white dark:text-black rounded-full w-8 h-8 flex items-center justify-center cursor-pointer active:scale-95 transition-colors duration-300"
             id="4">
             <i class="ri-close-large-fill text-sm"></i>
           </button>
@@ -214,75 +265,131 @@
         <!-- Goals Container -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4">
           <!-- Day Card -->
-          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
-            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
-              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
-              <img src="assets/images/check-double-fill.svg" alt=""
-                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+          <div
+            class="bg-gray-50 dark:bg-black shadow-[3px_3px_0_rgba(0,0,0,1)] dark:shadow-[3px_3px_0_rgba(255,255,255,1)] border-2 border-black dark:border-white rounded-lg transition-colors duration-300">
+            <div
+              class="bg-gray-200 dark:bg-black border-b-2 border-black dark:border-white p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black dark:text-white text-lg md:text-xl font-bold transition-colors duration-300">Monday
+              </h1>
+
+              <i class="clear-goals fa-solid fa-check-double text-black dark:text-white  text-xl md:text-2xl cursor-pointer active:scale-95 transition-colors duration-300"
+                title="Mark As Completed"></i>
             </div>
+
             <textarea
-              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+              class="get-text w-full h-[120px] outline-none text-black dark:text-slate-300 p-3 text-base md:text-lg font-medium resize-none transition-colors duration-300">
+            </textarea>
+
           </div>
-          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
-            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
-              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
-              <img src="assets/images/check-double-fill.svg" alt=""
-                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+
+          <div
+            class="bg-gray-50 dark:bg-black shadow-[3px_3px_0_rgba(0,0,0,1)] dark:shadow-[3px_3px_0_rgba(255,255,255,1)] border-2 border-black dark:border-white rounded-lg transition-colors duration-300">
+            <div
+              class="bg-gray-200 dark:bg-black border-b-2 border-black dark:border-white p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black dark:text-white text-lg md:text-xl font-bold transition-colors duration-300">Tuesday
+              </h1>
+
+              <i class="clear-goals fa-solid fa-check-double text-black dark:text-white  text-xl md:text-2xl cursor-pointer active:scale-95 transition-colors duration-300"
+                title="Mark As Completed"></i>
             </div>
+
             <textarea
-              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+              class="get-text w-full h-[120px] outline-none text-black dark:text-slate-300 p-3 text-base md:text-lg font-medium resize-none transition-colors duration-300">
+            </textarea>
+
           </div>
-          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
-            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
-              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
-              <img src="assets/images/check-double-fill.svg" alt=""
-                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+
+          <div
+            class="bg-gray-50 dark:bg-black shadow-[3px_3px_0_rgba(0,0,0,1)] dark:shadow-[3px_3px_0_rgba(255,255,255,1)] border-2 border-black dark:border-white rounded-lg transition-colors duration-300">
+            <div
+              class="bg-gray-200 dark:bg-black border-b-2 border-black dark:border-white p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black dark:text-white text-lg md:text-xl font-bold transition-colors duration-300">
+                Wednesday</h1>
+
+              <i class="clear-goals fa-solid fa-check-double text-black dark:text-white  text-xl md:text-2xl cursor-pointer active:scale-95 transition-colors duration-300"
+                title="Mark As Completed"></i>
             </div>
+
             <textarea
-              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+              class="get-text w-full h-[120px] outline-none text-black dark:text-slate-300 p-3 text-base md:text-lg font-medium resize-none transition-colors duration-300">
+            </textarea>
+
           </div>
-          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
-            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
-              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
-              <img src="assets/images/check-double-fill.svg" alt=""
-                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+
+          <div
+            class="bg-gray-50 dark:bg-black shadow-[3px_3px_0_rgba(0,0,0,1)] dark:shadow-[3px_3px_0_rgba(255,255,255,1)] border-2 border-black dark:border-white rounded-lg transition-colors duration-300">
+            <div
+              class="bg-gray-200 dark:bg-black border-b-2 border-black dark:border-white p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black dark:text-white text-lg md:text-xl font-bold transition-colors duration-300">
+                Thursday</h1>
+
+              <i class="clear-goals fa-solid fa-check-double text-black dark:text-white  text-xl md:text-2xl cursor-pointer active:scale-95 transition-colors duration-300"
+                title="Mark As Completed"></i>
             </div>
+
             <textarea
-              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+              class="get-text w-full h-[120px] outline-none text-black dark:text-slate-300 p-3 text-base md:text-lg font-medium resize-none transition-colors duration-300">
+            </textarea>
+
           </div>
-          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
-            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
-              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
-              <img src="assets/images/check-double-fill.svg" alt=""
-                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+
+          <div
+            class="bg-gray-50 dark:bg-black shadow-[3px_3px_0_rgba(0,0,0,1)] dark:shadow-[3px_3px_0_rgba(255,255,255,1)] border-2 border-black dark:border-white rounded-lg transition-colors duration-300">
+            <div
+              class="bg-gray-200 dark:bg-black border-b-2 border-black dark:border-white p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black dark:text-white text-lg md:text-xl font-bold transition-colors duration-300">Friday
+              </h1>
+
+              <i class="clear-goals fa-solid fa-check-double text-black dark:text-white  text-xl md:text-2xl cursor-pointer active:scale-95 transition-colors duration-300"
+                title="Mark As Completed"></i>
             </div>
+
             <textarea
-              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+              class="get-text w-full h-[120px] outline-none text-black dark:text-slate-300 p-3 text-base md:text-lg font-medium resize-none transition-colors duration-300">
+            </textarea>
+
           </div>
-          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
-            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
-              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
-              <img src="assets/images/check-double-fill.svg" alt=""
-                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+
+          <div
+            class="bg-gray-50 dark:bg-black shadow-[3px_3px_0_rgba(0,0,0,1)] dark:shadow-[3px_3px_0_rgba(255,255,255,1)] border-2 border-black dark:border-white rounded-lg transition-colors duration-300">
+            <div
+              class="bg-gray-200 dark:bg-black border-b-2 border-black dark:border-white p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black dark:text-white text-lg md:text-xl font-bold transition-colors duration-300">
+                Saturday</h1>
+
+              <i class="clear-goals fa-solid fa-check-double text-black dark:text-white  text-xl md:text-2xl cursor-pointer active:scale-95 transition-colors duration-300"
+                title="Mark As Completed"></i>
             </div>
+
             <textarea
-              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+              class="get-text w-full h-[120px] outline-none text-black dark:text-slate-300 p-3 text-base md:text-lg font-medium resize-none transition-colors duration-300">
+            </textarea>
+
           </div>
-          <div class="bg-gray-50 shadow-[3px_3px_0_rgba(0,0,0,1)] border-2 border-black rounded-lg">
-            <div class="bg-gray-200 border-b-2 border-black p-2 flex justify-between items-center rounded-t-lg">
-              <h1 class="text-black text-lg md:text-xl font-bold">Monday</h1>
-              <img src="assets/images/check-double-fill.svg" alt=""
-                class="clear-goals w-6 cursor-pointer active:scale-95" title="Mark As Completed">
+
+          <div
+            class="bg-gray-50 dark:bg-black shadow-[3px_3px_0_rgba(0,0,0,1)] dark:shadow-[3px_3px_0_rgba(255,255,255,1)] border-2 border-black dark:border-white rounded-lg transition-colors duration-300">
+            <div
+              class="bg-gray-200 dark:bg-black border-b-2 border-black dark:border-white p-2 flex justify-between items-center rounded-t-lg">
+              <h1 class="text-black dark:text-white text-lg md:text-xl font-bold transition-colors duration-300">Sunday
+              </h1>
+
+              <i class="clear-goals fa-solid fa-check-double text-black dark:text-white  text-xl md:text-2xl cursor-pointer active:scale-95 transition-colors duration-300"
+                title="Mark As Completed"></i>
             </div>
+
             <textarea
-              class="get-text w-full h-[120px] outline-none text-black p-3 text-base md:text-lg font-medium resize-none"></textarea>
+              class="get-text w-full h-[120px] outline-none text-black dark:text-slate-300 p-3 text-base md:text-lg font-medium resize-none transition-colors duration-300">
+            </textarea>
+
           </div>
+
         </div>
       </section>
 
       <!-- Footer -->
       <footer class="">
-        <h2 class="text-center text-black py-2 animate-pulse">Build with 💖 by Hasnain Ali</h2>
+        <h2 class="text-center text-black dark:text-white py-2 animate-pulse">Build with 💖 by Hasnain Ali</h2>
       </footer>
     </div>
 

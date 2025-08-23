@@ -1,3 +1,4 @@
+// open the features when get clicked..
 function openFeatures() {
   const allElem = document.querySelectorAll('.elem')
   const fullElemPage = document.querySelectorAll('.fullElem')
@@ -8,7 +9,7 @@ function openFeatures() {
       const page = fullElemPage[elem.id];
       page.style.display = 'block';
       page.classList.add("fixed", "inset-0", "z-50", "overflow-auto", "bg-white");
-      document.body.style.overflow = 'hidden'; 
+      document.body.style.overflow = 'hidden';
       fullElemPage[elem.id].style.display = 'block';
     })
   })
@@ -18,20 +19,68 @@ function openFeatures() {
       const page = fullElemPage[back.id];
       page.style.display = 'none';
       page.classList.remove("fixed", "inset-0", "z-50", "overflow-auto", "bg-white");
-      document.body.style.overflow = 'auto'; 
+      document.body.style.overflow = 'auto';
       fullElemPage[back.id].style.display = 'none';
     })
   })
 
-  let moon = document.querySelector('.moon')
-  moon.addEventListener('click', ()=>{
-    alert('Dark mode feature is coming soon! 🌑')
-  })
 }
-
 openFeatures()
 
 
+// weather API function
+async function getWeatherData() {
+  const apiKey = '5a2de221b5b0470fae2141216250908'
+  const area = 'hyderabad'
+  let data
+  const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${area}`)
+  data = await response.json()
+
+  const headerH2 = document.querySelector('.header1 h2')
+  const headerH1 = document.querySelector('.header1 h1')
+  const headerH4 = document.querySelector('.header1 h4')
+  const header2 = document.querySelector('.header2')
+
+  function updateTimeDate() {
+    const now = new Date()
+
+    const time = now.toLocaleTimeString('en-IN', {
+      weekday: 'long',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    })
+
+    const date = now.toLocaleDateString('en-IN', {
+      dateStyle: 'medium'
+    })
+
+    headerH1.innerHTML = time
+    headerH2.innerHTML = date
+  }
+
+  setInterval(updateTimeDate, 1000)
+  updateTimeDate()
+
+
+  headerH4.innerHTML = `${data.location.name} (${data.location.region})`
+  header2.innerHTML = `
+      <div class="flex-1">
+        <h2 class="text-5xl  font-bold">${data.current.temp_c} °C</h2>
+        <h3 class="text-2xl font-bold mb-3 md:mb-6">${data.current.condition.text}</h3>
+      </div>
+      <div class="flex-1 space-y-2">
+        <h3 class="text-sm sm:text-xl">Precipitation: ${data.current.precip_mm} mm</h3>
+        <h3 class="text-sm sm:text-xl">Humidity: ${data.current.humidity}%</h3>
+        <h3 class="text-sm sm:text-xl">Wind: ${data.current.wind_kph} km/h</h3>
+      </div>
+          `
+}
+getWeatherData()
+
+
+// to do list
 function todoList() {
   let currentTaskList = []
   let allTask = document.querySelector('.allTask')
@@ -59,18 +108,18 @@ function todoList() {
       const impClass = elem.imp ? 'opacity-100' : 'opacity-0'
 
       sum += `
-        <div class="task flex flex-col w-full bg-white border-2 border-black text-black p-2 rounded">
+        <div class="task flex flex-col w-full bg-white dark:bg-black border-2 border-black dark:border-white text-black dark:text-white p-2 rounded transition-colors duration-300">
           <div class="flex items-center justify-between">
-            <h5 class="text-black text-2xl font-semibold flex items-start gap-[10px]">
+            <h5 class="text-black dark:text-white text-2xl font-semibold flex items-start gap-[10px] transition-colors duration-300">
               ${elem.task}
               <span class="${impClass} bg-red-500 text-white text-[11px] px-[8px] py-[4px] rounded-2xl">Imp</span>
             </h5>
             <div class="flex gap-2">
-              <i class="fa-regular fa-square-caret-down text-black text-xl cursor-pointer active:scale-95 md:text-2xl" onclick="toggleDetails(${idx})"></i>
-              <i class="icon fa-solid fa-check-double text-black text-xl cursor-pointer active:scale-95 md:text-2xl" id="${idx}"></i>
+              <i class="fa-regular fa-square-caret-down text-black dark:text-white text-xl cursor-pointer active:scale-95 md:text-2xl transition-colors duration-300" onclick="toggleDetails(${idx})"></i>
+              <i class="icon fa-solid fa-check-double text-black dark:text-white text-xl cursor-pointer active:scale-95 md:text-2xl transition-colors duration-300" id="${idx}"></i>
             </div>
           </div>
-          <p id="details-${idx}" class="text-black border-t-1 pt-2 border-gray-300 mt-2 hidden transition-all duration-300 ease-in-out">
+          <p id="details-${idx}" class="text-black dark:text-white border-t-1 pt-2 border-gray-300 mt-2 hidden transition-all duration-300 ease-in-out">
             ${elem.details}
           </p>
         </div>
@@ -123,9 +172,10 @@ function todoList() {
   })
 
 }
-
 todoList()
 
+
+// daily planner
 function dailyPlanner() {
   let dayPlanner = document.querySelector('.day-planner');
   let dayPlanData = JSON.parse(localStorage.getItem('dayPlanData')) || {};
@@ -138,11 +188,11 @@ function dailyPlanner() {
   hours.forEach((time, idx) => {
     const savedData = dayPlanData[idx] || '';
     wholeDaySum += `
-    <div class="flex flex-col bg-white border-2 border-black p-2 rounded">
-      <p class="text-black text-lg font-semibold mb-2">${time}</p>
+    <div class="flex flex-col bg-white dark:bg-black border-2 border-black dark:border-white p-2 rounded transition-colors duration-300">
+      <p class="text-black dark:text-white text-lg font-semibold mb-2 transition-colors duration-300">${time}</p>
       <input 
         id="${idx}" 
-        class="border-2 border-black text-black px-3 py-2 text-base md:text-lg rounded outline-none" 
+        class="border-2 border-black dark:border-white text-black dark:text-white px-3 py-2 text-base md:text-lg rounded outline-none transition-colors duration-300" 
         type="text" 
         placeholder="Write your plan..." 
         value="${savedData || ""}">
@@ -159,10 +209,10 @@ function dailyPlanner() {
     });
   });
 }
-
 dailyPlanner();
 
 
+// motivational quote API
 async function fetchQuote() {
   let reloadQuote = document.querySelector('.reload-quote');
   let quoteContent = document.querySelector('.motivation-quote');
@@ -181,10 +231,10 @@ async function fetchQuote() {
     quoteAuthor.textContent = '';
   }
 }
-
 fetchQuote();
 
 
+// pomodoro timer
 function pomodoroTimer() {
   const startTimer = document.querySelector('.start-timer')
   const pauseTimer = document.querySelector('.pause-timer')
@@ -240,61 +290,10 @@ function pomodoroTimer() {
 
   updateTimer()
 }
-
 pomodoroTimer()
 
 
-async function getWeatherData() {
-  const apiKey = '5a2de221b5b0470fae2141216250908'
-  const area = 'hyderabad'
-  let data
-  const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${area}`)
-  data = await response.json()
-
-  const headerH2 = document.querySelector('.header1 h2')
-  const headerH1 = document.querySelector('.header1 h1')
-  const headerH4 = document.querySelector('.header1 h4')
-  const header2 = document.querySelector('.header2')
-
-  function updateTimeDate() {
-    const now = new Date()
-
-    const time = now.toLocaleTimeString('en-IN', {
-      weekday: 'long',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true
-    })
-
-    const date = now.toLocaleDateString('en-IN', {
-      dateStyle: 'medium'
-    })
-
-    headerH1.innerHTML = time
-    headerH2.innerHTML = date
-  }
-
-  setInterval(updateTimeDate, 1000)
-  updateTimeDate()
-
-
-  headerH4.innerHTML = `${data.location.name} (${data.location.region})`
-  header2.innerHTML = `
-      <div class="flex-1">
-        <h2 class="text-5xl  font-bold">${data.current.temp_c} °C</h2>
-        <h3 class="text-2xl font-bold mb-3 md:mb-6">${data.current.condition.text}</h3>
-      </div>
-      <div class="flex-1 space-y-2">
-        <h3 class="text-sm sm:text-xl">Precipitation: ${data.current.precip_mm} mm</h3>
-        <h3 class="text-sm sm:text-xl">Humidity: ${data.current.humidity}%</h3>
-        <h3 class="text-sm sm:text-xl">Wind: ${data.current.wind_kph} km/h</h3>
-      </div>
-          `
-}
-
-getWeatherData()
-
+// daily goals
 function dailyGoals() {
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
@@ -318,5 +317,38 @@ function dailyGoals() {
     })
   })
 }
-
 dailyGoals()
+
+
+// dark-mode 
+function darkMode() {
+  document.addEventListener('DOMContentLoaded', () => {
+    const html = document.documentElement;
+    const moon = document.querySelector('.moon');
+    const sun = document.querySelector('.sun');
+
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') html.classList.add('dark');
+
+    const syncIcon = () => {
+      const isDark = html.classList.contains('dark');
+      moon.classList.toggle('hidden', isDark);
+      sun.classList.toggle('hidden', !isDark)
+    }
+
+    syncIcon();
+
+    moon.addEventListener('click', () => {
+      html.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      syncIcon();
+    })
+
+    sun.addEventListener('click', () => {
+      html.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      syncIcon();
+    })
+  })
+}
+darkMode()
